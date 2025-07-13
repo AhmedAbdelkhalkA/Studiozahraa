@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZAHRAA STUDIO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(-45deg, #000, #1a1a1a, #d4af37, #111);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .logo img {
+      width: 350px;
+      max-width: 80%;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    h1 {
+      color: #d4af37;
+      margin-bottom: 40px;
+      font-size: 1.8rem;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 300px;
+      z-index: 1;
+    }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 12px 20px;
+      border: 1px solid #d4af37;
+      border-radius: 40px;
+      font-size: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+      box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+      cursor: pointer;
+    }
+    .button img {
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+    }
+    .button:hover {
+      background-color: #d4af37;
+      color: #000;
+    }
+
+    .sidebar-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1002;
+    }
+    #sidebar {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #1a1a1a, #333, #000);
+      background-size: 300% 300%;
+      animation: sidebarBG 10s ease infinite;
+      color: white;
+      padding: 0;
+      transition: width 0.3s ease;
+      z-index: 1001;
+    }
+    #sidebar.open {
+      width: 250px;
+      padding: 20px;
+    }
+    @keyframes sidebarBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    #sidebar a {
+      color: white;
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+    }
+    #sidebar h3 {
+      color: #d4af37;
+    }
+    #sidebar p {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: none;
+    }
+
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 9999;
+    }
+    .floating-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background-color: #25D366;
+      color: white;
+      font-size: 26px;
+      text-align: center;
+      line-height: 55px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .floating-btn.call-btn {
+      background-color: #34B7F1;
+    }
+    .floating-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar-toggle" onclick="toggleSidebar()">☰</div>
+  <div class="overlay" onclick="closeSidebar()"></div>
+
+  <div id="sidebar">
+    <h3>القائمة</h3>
+    <a href="index.html">الرئيسية</a>
+    <a href="products.html" target="_blank">منتجاتنا</a>
+    <a href="admin_zahraa.html" target="_blank">إضافة منتج</a>
+    <a href="tel:01286815625">اتصل بنا</a>
+    <p>نحن في خدمتك دائمًا في ZAHRAA STUDIO 💛</p>
+  </div>
+
+  <div class="logo">
+    <a href="https://www.facebook.com/share/1DuEaxYhW3/" target="_blank">
+      <img src="https://i.ibb.co/gFbYCVhy/file-000000003d48620a9a545c81b8bf35e5.png" alt="Zahraa Studio Logo">
+    </a>
+  </div>
+
+  <h1>أهلاً بكم في ZAHRAA STUDIO</h1>
+
+  <div class="buttons">
+    <a class="button" href="https://wa.me/201204194540" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp"> واتساب 1
+    </a>
+    <a class="button" href="https://wa.me/201286815625" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp"> واتساب 2
+    </a>
+    <a class="button" href="https://www.facebook.com/share/1DuEaxYhW3/" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/1877F2/facebook--v1.png" alt="Facebook"> صفحتنا على فيسبوك
+    </a>
+  </div>
+
+  <div class="floating-buttons">
+    <a href="tel:01286815625" class="floating-btn call-btn" title="اتصل بنا">📞</a>
+    <a href="https://wa.me/201204194540" class="floating-btn whatsapp-btn" title="واتساب">💬</a>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.querySelector('.overlay');
+    function openSidebar() {
+      sidebar.classList.add('open');
+      overlay.style.display = 'block';
+    }
+    function closeSidebar() {
+      sidebar.classList.remove('open');
+      overlay.style.display = 'none';
+    }
+    function toggleSidebar() {
+      sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    }
+  </script>
+</body>
+</html>
